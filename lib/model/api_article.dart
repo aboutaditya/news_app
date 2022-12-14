@@ -2,9 +2,7 @@ import 'package:news_app/model/api_source.dart';
 
 class Article {
   Source source;
-  String author;
   String title;
-  String description;
   String url;
   String urlToImage;
   String publishedAt;
@@ -12,9 +10,7 @@ class Article {
 
   Article(
       {required this.source,
-      required this.author,
       required this.title,
-      required this.description,
       required this.url,
       required this.urlToImage,
       required this.publishedAt,
@@ -22,13 +18,11 @@ class Article {
   factory Article.fromJson(Map<String, dynamic> json) {
     return Article(
       source: Source.fromJson(json['source']),
-      author: json['author'] as String,
-      title: json['title'] as String,
-      description: json['description'] as String,
-      url: json['url'] as String,
-      urlToImage: json['urlToImage'] as String,
-      publishedAt: json['publishedAt'] as String,
-      content: json['content'] as String,
+      title: json['title'].toString() ,
+      url: json['url'].toString() ,
+      urlToImage: json['urlToImage'].toString(),
+      publishedAt: json['publishedAt'].toString(),
+      content: json['content'].toString(),
     );
   }
 }

@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 fontSize: 29,
                 color: Colors.white,
-                letterSpacing: 5),
+                letterSpacing: 4),
           ),
           centerTitle: true,
         ),
