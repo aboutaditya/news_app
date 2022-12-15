@@ -50,9 +50,10 @@ Widget customListTile(Article article, BuildContext context) {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Container(
-                    decoration: const BoxDecoration(
+                    decoration:  BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
                         backgroundBlendMode: BlendMode.darken,
-                        gradient: LinearGradient(
+                        gradient: const LinearGradient(
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter,
                           colors: [
