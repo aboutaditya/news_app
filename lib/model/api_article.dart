@@ -6,7 +6,7 @@ class Article {
   String url;
   String urlToImage;
   String publishedAt;
-  String content;
+  String description;
 
   Article(
       {required this.source,
@@ -14,7 +14,7 @@ class Article {
       required this.url,
       required this.urlToImage,
       required this.publishedAt,
-      required this.content});
+      required this.description});
   factory Article.fromJson(Map<String, dynamic> json) {
     return Article(
       source: Source.fromJson(json['source']),
@@ -22,7 +22,7 @@ class Article {
       url: json['url'].toString() ,
       urlToImage: json['urlToImage'].toString(),
       publishedAt: json['publishedAt'].toString(),
-      content: json['content'].toString(),
+      description: json['description'].toString(),
     );
   }
 }

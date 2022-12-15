@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:news_app/body/article.dart';
 import 'package:news_app/model/api_article.dart';
 
 Widget customListTile(Article article, BuildContext context) {
   return InkWell(
     onTap: () {
+      Navigator.push(context,MaterialPageRoute(builder: (context)=>ArticlePage(urltoImage: article.urlToImage, title: article.title, datePublished: article.publishedAt, descr: article.description, writerCompany: article.source.name)));
     },
     child: Padding(
       padding: const EdgeInsets.only(top: 12, left: 16, right: 16, bottom: 12),
